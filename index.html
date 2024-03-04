@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mudança de Cor de Fundo</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+    }
+
+
+.logo{
+  padding: 100px;
+
+  img{
+    width: 150px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<input type="color" id="cor" name="cor" onchange="mudarCorDeFundo(this.value)">
+
+
+<div class="logo">
+  <img src="logo.png" alt="logo">
+</div>
+
+<script>
+    function mudarCorDeFundo(cor) {
+        document.body.style.backgroundColor = cor;
+    }
+</script>
+
+</body>
+</html>
